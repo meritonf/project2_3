@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name=
+            "com.example.meritonf.projekti_2_3.activities.activities.activities.main_activities.ListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        tools:layout="@layout/months_cell"
+        />
+
+</RelativeLayout>
