@@ -19,36 +19,33 @@ public class Portrait_LandscapeActivity extends Activity{
     TextView countclickView;
     Button button;
 
-    private int clicks = 0 ;
-
-
+    private Integer clicks = 0 ;
     private final static String CLICK_KEY = "clicks";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_portrait_landscape);
+        countclickView = findViewById(R.id.countClicksText);
+        button = findViewById(R.id.clickButton);
 
         if(savedInstanceState != null){
             clicks = savedInstanceState.getInt(CLICK_KEY);
+            countclickView.setText(clicks.toString());
         }
 
-        countclickView = findViewById(R.id.countClicksText);
-        button = findViewById(R.id.clickButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clicks++;
+                countclickView.setText(clicks.toString());
+            }
+        });
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(CLICK_KEY, clicks);
-    }
-
-    private void onClickListener(){
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                clicks++;
-            }
-        });
     }
 }
