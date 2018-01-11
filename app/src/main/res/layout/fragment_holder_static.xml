@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/listFragment"
         android:name=
-            "com.example.meritonf.projekti_2_3.activities.activities.activities.main_activities.ListFragment"
+            "com.example.meritonf.projekti_2_3.activities.activities.activities.main_activities.HolderFragment"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         tools:layout="@layout/months_cell"

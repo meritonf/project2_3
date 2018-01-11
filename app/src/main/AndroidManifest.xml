@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
-        <activity android:name=".activities.activities.activities.main_activities.WebViewActivity">
+        <activity android:name=".activities.activities.activities.main_activities.ImageActivity">
             <intent-filter>
                  <action android:name="android.intent.action.MAIN" />
                  <category android:name="android.intent.category.LAUNCHER" />

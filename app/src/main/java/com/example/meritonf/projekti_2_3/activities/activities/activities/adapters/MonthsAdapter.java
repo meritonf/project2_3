@@ -2,6 +2,7 @@ package com.example.meritonf.projekti_2_3.activities.activities.activities.adapt
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -73,7 +74,7 @@ public class MonthsAdapter  extends BaseAdapter{
         month = months.get(position);
         holder.monthDesc.setText(month.getDescription());
         holder.monthName.setText(month.getTitulli());
-        //holder.monthImage.setImageResource();
+        holder.monthImage.setImageURI(Uri.parse(month.getPhotoURL()));
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
